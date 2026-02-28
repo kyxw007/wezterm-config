@@ -31,7 +31,7 @@ local mocha = {
 
 local colorscheme = {
    foreground = mocha.text,
-   background = mocha.base,
+   background = '#000000', -- Pure black for Clear Dark feel
    cursor_bg = mocha.rosewater,
    cursor_border = mocha.rosewater,
    cursor_fg = mocha.crust,
@@ -58,7 +58,7 @@ local colorscheme = {
       '#F2F2F2', -- white
    },
    tab_bar = {
-      background = 'rgba(0, 0, 0, 0.4)',
+      background = 'rgba(0, 0, 0, 0)',
       active_tab = {
          bg_color = mocha.surface2,
          fg_color = mocha.text,

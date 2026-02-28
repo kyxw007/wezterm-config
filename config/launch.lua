@@ -19,7 +19,11 @@ if platform.is_win then
       },
    }
 elseif platform.is_mac then
-   options.default_prog = { '/opt/homebrew/bin/fish', '-l' }
+   options.default_prog = { 'zsh', '-l' }
+   options.set_environment_variables = {
+      CLICOLOR = '1',
+      LSCOLORS = 'Gxfxcxdxbxegedabagacad',
+   }
    options.launch_menu = {
       { label = 'Bash', args = { 'bash', '-l' } },
       { label = 'Fish', args = { '/opt/homebrew/bin/fish', '-l' } },
@@ -27,7 +31,10 @@ elseif platform.is_mac then
       { label = 'Zsh', args = { 'zsh', '-l' } },
    }
 elseif platform.is_linux then
-   options.default_prog = { 'fish', '-l' }
+   options.default_prog = { 'zsh', '-l' }
+   options.set_environment_variables = {
+      CLICOLOR = '1',
+   }
    options.launch_menu = {
       { label = 'Bash', args = { 'bash', '-l' } },
       { label = 'Fish', args = { 'fish', '-l' } },

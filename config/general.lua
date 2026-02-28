@@ -8,6 +8,10 @@ return {
 
    scrollback_lines = 20000,
 
+   font_dirs = {
+      '/System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/',
+   },
+
    hyperlink_rules = {
       -- Matches: a URL in parens: (URL)
       {

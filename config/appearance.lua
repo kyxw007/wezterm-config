@@ -21,8 +21,13 @@ return {
    -- color scheme
    colors = colors,
 
+   window_background_opacity = 0.9,
+   macos_window_background_blur = 30,
+   native_macos_fullscreen_mode = false,
+   window_decorations = 'RESIZE',
+
    -- background: pass in `true` if you want wezterm to start with focus mode on (no bg images)
-   background = backdrops:initial_options(false),
+   background = backdrops:initial_options(true),
 
    -- scrollbar
    enable_scroll_bar = true,
@@ -31,6 +36,7 @@ return {
    enable_tab_bar = true,
    hide_tab_bar_if_only_one_tab = false,
    use_fancy_tab_bar = false,
+   tab_bar_at_bottom = false,
    tab_max_width = 25,
    show_tab_index_in_tab_bar = false,
    switch_to_last_active_tab_when_closing_tab = true,
@@ -51,7 +57,7 @@ return {
    adjust_window_size_when_changing_font_size = false,
    window_close_confirmation = 'NeverPrompt',
    window_frame = {
-      active_titlebar_bg = '#090909',
+      active_titlebar_bg = 'transparent',
       -- font = fonts.font,
       -- font_size = fonts.font_size,
    },
