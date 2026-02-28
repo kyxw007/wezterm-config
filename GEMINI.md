@@ -39,3 +39,24 @@ Users can customize the following files to match their environment:
 - **GPU Adapter Selector:** Automatically selects the best available GPU and graphics API (Metal on Mac, DX12/Vulkan on Windows, Vulkan on Linux).
 - **Custom Status Bars:** Rich status information on both left and right sides of the tab bar.
 - **Workspace Management:** Enhanced key bindings for managing tabs, panes, and workspaces.
+
+## Workspace Customizations
+The following specific preferences have been applied to this workspace:
+- **Default Shell:** Set to `zsh` for macOS and Linux.
+- **Font Settings:**
+  - **Family:** `SF Mono` (loaded from `/System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/` on macOS).
+  - **Weight:** `DemiBold` (to match the visual thickness of macOS Terminal).
+  - **Size:** 12 (macOS).
+- **Aesthetic (Clear Dark):**
+  - **Background:** Pure black (`#000000`).
+  - **Transparency:** `window_background_opacity = 0.9`.
+  - **Blur:** `macos_window_background_blur = 30`.
+  - **Images:** Background images are disabled by default (Focus Mode enabled).
+  - **UI:** Transparent title bar and tab bar background.
+- **Window Behavior:**
+  - **Fullscreen:** `native_macos_fullscreen_mode = false` with `window_decorations = 'RESIZE'`. This hides the macOS system menu bar while keeping the WezTerm tab bar visible.
+  - **Tab Bar:** Classic tab bar (`use_fancy_tab_bar = false`) is used for better stability in custom fullscreen layouts.
+- **Environment:**
+  - **CLI Color:** `CLICOLOR = '1'` and custom `LSCOLORS` are set to enable `ls` command highlighting.
+- **Key Bindings:**
+  - **Fullscreen:** `Command` + `Control` + `f` or `Alt` + `Enter`.
