@@ -23,9 +23,8 @@ return {
 
    window_background_opacity = 0.9,
    macos_window_background_blur = 30,
-   native_macos_fullscreen_mode = false,
+   native_macos_fullscreen_mode = true,
    window_decorations = 'RESIZE',
-
    -- background: pass in `true` if you want wezterm to start with focus mode on (no bg images)
    background = backdrops:initial_options(true),
 

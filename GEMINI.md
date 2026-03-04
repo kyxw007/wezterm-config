@@ -54,7 +54,7 @@ The following specific preferences have been applied to this workspace:
   - **Images:** Background images are disabled by default (Focus Mode enabled).
   - **UI:** Transparent title bar and tab bar background.
 - **Window Behavior:**
-  - **Fullscreen:** `native_macos_fullscreen_mode = false` with `window_decorations = 'RESIZE'`. This hides the macOS system menu bar while keeping the WezTerm tab bar visible.
+  - **Fullscreen:** `native_macos_fullscreen_mode = true` with `window_decorations = 'RESIZE'`. This allows WezTerm to occupy its own macOS Space.
   - **Tab Bar:** Classic tab bar (`use_fancy_tab_bar = false`) is used for better stability in custom fullscreen layouts.
 - **Environment:**
   - **CLI Color:** `CLICOLOR = '1'` and custom `LSCOLORS` are set to enable `ls` command highlighting.
