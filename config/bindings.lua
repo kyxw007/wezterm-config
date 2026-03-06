@@ -50,6 +50,8 @@ local keys = {
    },
 
    -- cursor movement --
+   { key = 'Home',       mods = 'NONE',        action = act.SendString '\u{1b}OH' },
+   { key = 'End',        mods = 'NONE',        action = act.SendString '\u{1b}OF' },
    { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\u{1b}OH' },
    { key = 'RightArrow', mods = mod.SUPER,     action = act.SendString '\u{1b}OF' },
    { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\u{15}' },
