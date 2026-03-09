@@ -3,6 +3,7 @@
 ## Project Overview
 This project is a modular and highly customizable WezTerm configuration written in Lua. It aims to provide an enhanced terminal experience with advanced features like dynamic background management, GPU adapter optimization, and extensive key bindings.
 
+
 ### Main Technologies
 - **WezTerm:** A GPU-accelerated cross-platform terminal emulator.
 - **Lua:** The primary configuration language for WezTerm.
