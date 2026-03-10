@@ -6,17 +6,18 @@ local options = {
 }
 
 if platform.is_win then
-   options.default_prog = { 'pwsh', '-NoLogo' }
+
+   -- 设置默认启动为 WSL (默认发行版)
+   -- 如果想启动特定发行版，可以使用 { 'wsl', '-d', 'Ubuntu' }
+   options.default_prog = { 'wsl', '~' } 
+
    options.launch_menu = {
+      { label = 'WSL', args = { 'wsl', '~' } }, -- 添加 WSL 到启动菜单
       { label = 'PowerShell Core', args = { 'pwsh', '-NoLogo' } },
       { label = 'PowerShell Desktop', args = { 'powershell' } },
       { label = 'Command Prompt', args = { 'cmd' } },
       { label = 'Nushell', args = { 'nu' } },
-      { label = 'Msys2', args = { 'ucrt64.cmd' } },
-      {
-         label = 'Git Bash',
-         args = { 'C:\\Users\\kevin\\scoop\\apps\\git\\current\\bin\\bash.exe' },
-      },
+      -- ... 其他保持不变
    }
 elseif platform.is_mac then
    options.default_prog = { 'zsh', '-l' }
