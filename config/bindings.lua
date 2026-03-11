@@ -26,8 +26,8 @@ local keys = {
       action = act.ShowLauncherArgs({ flags = 'FUZZY|WORKSPACES' }),
    },
    { key = 'F12', mods = 'NONE',    action = act.ShowDebugOverlay },
-   { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
-   { key = 'f', mods = 'SUPER|CTRL', action = act.ToggleFullScreen },
+   { key = 'Enter', mods = mod.SUPER, action = act.ToggleFullScreen },
+   { key = 'f', mods = mod.SUPER_REV, action = act.ToggleFullScreen },
    { key = 'f',   mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
    {
       key = 'u',
@@ -74,7 +74,7 @@ local keys = {
 
    -- tab: title
    { key = '0',          mods = mod.SUPER,     action = act.EmitEvent('tabs.manual-update-tab-title') },
-   { key = '0',          mods = mod.SUPER_REV, action = act.EmitEvent('tabs.reset-tab-title') },
+   { key = 'T',          mods = mod.SUPER_REV, action = act.EmitEvent('tabs.reset-tab-title') },
 
    -- tab: hide tab-bar
    { key = '9',          mods = mod.SUPER,     action = act.EmitEvent('tabs.toggle-tab-bar'), },
@@ -117,6 +117,12 @@ local keys = {
          window:maximize()
       end)
    },
+
+   -- fonts --
+   -- fonts: resize font
+   { key = '-', mods = mod.SUPER_REV, action = act.DecreaseFontSize },
+   { key = '=', mods = mod.SUPER_REV, action = act.IncreaseFontSize },
+   { key = '0', mods = mod.SUPER_REV, action = act.ResetFontSize },
 
    -- background controls --
    {
